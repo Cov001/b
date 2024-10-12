@@ -25,7 +25,7 @@ const Home = () => {
   useEffect(() => {
     const url =
       process.env.NODE_ENV === "production"
-        ? "https://video-confe-client.onrender.com"
+        ? "https://a-3kx3.onrender.com"
         : "http://localhost:5000";
 
     console.log(`Environment: ${process.env.NODE_ENV}`);
