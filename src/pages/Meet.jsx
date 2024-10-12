@@ -163,7 +163,7 @@ const Meet = () => {
 
     const url =
       process.env.NODE_ENV === "production"
-        ? "https://video-conferencing-webapp.vercel.app/"
+        ? "https://b-ochre-two.vercel.app/"
         : "http://localhost:3000";
 
     window.location.href = url;
