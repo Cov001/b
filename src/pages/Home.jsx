@@ -12,6 +12,7 @@ const constraints = {
 const Home = () => {
   // using context
   const { state, dispatch } = useContext(AppContext);
+  const BASE_URL = process.env.REACT_APP_API_DEVELOPMENT;
 
   const navigate = useNavigate();
 
@@ -23,6 +24,8 @@ const Home = () => {
   } = useForm();
 
   useEffect(() => {
+    console.log(BASE_URL);
+
     const url =
       process.env.NODE_ENV === "production"
         ? "https://a-3kx3.onrender.com"

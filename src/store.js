@@ -1,5 +1,5 @@
 import { toast } from "react-toastify";
-import MsgNotifItem from "./Components/MsgNotifItem";
+import MsgNotifItem from "./components/MsgNotifItem";
 
 export const initialState = {
   email: "",
@@ -10,6 +10,15 @@ export const initialState = {
   socket: null,
   chat: [],
   showChatBox: false,
+  user: {
+    name: null,
+    email: null,
+    avatar: null,
+    token: null,
+    id: null,
+  },
+  screenLoading: false,
+  openNav: true,
 };
 
 /*
@@ -120,6 +129,43 @@ export const reducer = (state = initialState, action) => {
       return {
         ...state,
         remoteUsers: remoteUsers,
+      };
+    case "SET_SCREEN_LOADING":
+      return {
+        ...state,
+        screenLoading: action.payload.isLoading,
+      };
+    case "SET_OPEN_NAV":
+      return {
+        ...state,
+        openNav: action.payload.isLoading,
+      };
+
+    case "USER_LOGIN":
+      const userData = {
+        name: action.payload.name,
+        email: action.payload.email,
+        avatar: action.payload.avatar,
+        token: action.payload.token,
+        id: action.payload.id,
+      };
+      // Lưu thông tin người dùng vào localStorage
+      localStorage.setItem("userData", JSON.stringify(userData));
+      return {
+        ...state,
+        user: userData,
+      };
+
+    case "USER_LOGOUT":
+      return {
+        ...state,
+        user: {
+          name: null,
+          email: null,
+          avatar: null,
+          token: null,
+          id: null,
+        },
       };
 
     default:

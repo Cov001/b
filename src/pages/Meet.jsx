@@ -8,9 +8,9 @@ import {
   closePeerConnectionOfLeavingUser,
   replaceTrack,
 } from "../utils/webRtcHandler";
-import VideoContainer from "../Components/VideoContainer";
+import VideoContainer from "../components/VideoContainer";
 import "../css/Meet_Grid.css";
-import Chat from "../Components/Chat";
+import Chat from "../components/Chat";
 import { resizeComponent, IconToggle } from "../utils/resizeComponent";
 import store from "../app/store";
 import { useSelector, useDispatch } from "react-redux";
@@ -188,11 +188,11 @@ const Meet = () => {
                 <div className="absolute top-0 left-0 right-0 flex justify-between items-center p-2">
                   <p className=" bottom-5 left-5 text-white">You</p>
                   <div className="text-white items-center  top-2 right-5 text-2xl px-2 rounded-full bg-slate-900 hidden">
-                    <i class="bi bi-volume-up-fill"></i>
-                    <i class="bi bi-volume-mute-fill"></i>
+                    <i className="bi bi-volume-up-fill"></i>
+                    <i className="bi bi-volume-mute-fill"></i>
 
-                    <i class="bi bi-camera-video-fill"></i>
-                    <i class="bi bi-camera-video-off"></i>
+                    <i className="bi bi-camera-video-fill"></i>
+                    <i className="bi bi-camera-video-off"></i>
                   </div>
                 </div>
                 <video
