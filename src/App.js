@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import SignIn from "./pages/Auth/SignIn";
 import SignUp from "./pages/Auth/SignUp";
 // import ForgotPassWord from "./Page/Auth/ForgotPassWord";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar"
 // import CreateRoom from "./Page/HomeRoom/CreateRoom";
 // import Room from "./Page/HomeRoom/Room";
 // import { useEffect, useState } from "react";
