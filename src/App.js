@@ -3,31 +3,22 @@ import { createContext, useReducer, useEffect } from "react";
 import { initialState, reducer } from "./store";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+import Home from "./pages/Home";
+import Meet from "./pages/Meet";
 import SignIn from "./pages/Auth/SignIn";
 import SignUp from "./pages/Auth/SignUp";
-// import ForgotPassWord from "./Page/Auth/ForgotPassWord";
-// import Navbar from "./components/Navbar"
-// import CreateRoom from "./Page/HomeRoom/CreateRoom";
-// import Room from "./Page/HomeRoom/Room";
-// import { useEffect, useState } from "react";
-import ListRoom from "./pages/HomeRoom/ListRoom";
-// import TestRoom from "./Page/HomeRoom/TestRoom";
-// import { useContext } from "react";
-import RoomChat from "./pages/ChatRoom/RoomChat"
-// import Maybe from "./Page/Maybe/Maybe";
-import ListContest from "./pages/Contest/ListContest"
-import ContestCreate from "./pages/Contest/ContestCreate"
-import MyContest from "./pages/Contest/MyContest"
-// import Contest from "./Page/Contest/Contest";
-// import Toast from "./Components/ToastSuccess";
-// import AuthCode from "./Page/Auth/AuthCode";
 import AuthEmail from "./components/AuthEmail";
-import StartContest from "./pages/Contest/StartContest"
+import ListRoom from "./pages/HomeRoom/ListRoom";
+import RoomChat from "./pages/ChatRoom/RoomChat";
+import ListContest from "./pages/Contest/ListContest"
+import MyContest from "./pages/Contest/MyContest";
+import ContestCreate from "./pages/Contest/ContestCreate";
+import StartContest from "./pages/Contest/StartContest";
 import TableResult from "./pages/Contest/TableResult"
+import FormInfoContest from "./components/FormInfoContest";
 import FormUpdateContest from "./components/FormUpdateContest";
-import FormInfoContest from "./components/FormInfoContest"
-import Meet from "./pages/Meet";
-import Home from "./pages/Home";
+import Navbar from "./components/Navbar"
 import { Routes, Route } from "react-router-dom";
 import PrepareRoom from "./pages/PrepareRoom";
 import "./animation/fontawesome-free-6.6.0-web/css/all.min.css"
@@ -48,7 +39,7 @@ function App() {
       {!state.screenLoading ? (
         <>
           <div className="h-20 w-full z-50 fixed top-0">
-            {/* {state.openNav && <Navbar />} */}
+            {state.openNav && <Navbar />}
           </div>
           <div className="min-h-screen w-full z-0">
             <Routes>
