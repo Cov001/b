@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import Meet from "./pages/Meet";
 import SignIn from "./pages/Auth/SignIn";
 import SignUp from "./pages/Auth/SignUp";
-import AuthEmail from "./components/AuthEmail";
+import AuthCode from "./pages/Auth/AuthCode";
 import ListRoom from "./pages/HomeRoom/ListRoom";
 import RoomChat from "./pages/ChatRoom/RoomChat";
 import ListContest from "./pages/Contest/ListContest"
